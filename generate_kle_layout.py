@@ -78,10 +78,8 @@ def generate_kle_layout(info_json_path):
 keyboards_folder = ''
 kle_folder = ''
 
-# Step 1: Find folders containing info.json
 info_json_folders = find_info_json_folders(keyboards_folder)
 
-# Step 2: Generate KLE layout for each folder and save to kle.json
 for folder in info_json_folders:
     info_json_path = os.path.join(keyboards_folder, folder, 'info.json')
     kle_json = generate_kle_layout(info_json_path)
